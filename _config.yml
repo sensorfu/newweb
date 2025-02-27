@@ -1,7 +1,10 @@
 title: SensorFu
-url: https://www.sensorfu.com
+url: https://new.sensorfu.com
 timezone: UTC
 
-repository: larpo/sensorfu.github.io
+repository: sensorfu/newweb
 include: [".well-known"]
+
 # Build settings
+# Disable github pages default theme
+theme: null

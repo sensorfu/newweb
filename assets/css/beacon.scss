@@ -1,0 +1,43 @@
+---
+---
+.beacon-hero {
+  background-image: url(../img/beacon_banner.jpg);
+  height: 500px;
+
+  .hero-content {
+    max-width: 500px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.beacon-card {
+  display: flex;
+  background: #EEEEEE;
+  margin-bottom: 1rem;
+
+
+  .black {
+    color: black;
+  }
+
+  .text-container {
+    flex-grow: 1;
+    padding: 2rem;
+  }
+
+  .icon-container {
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 75px;
+
+    background: var(--primary-color);
+
+    img {
+      height: auto;
+    }
+  }
+}
