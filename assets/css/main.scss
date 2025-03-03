@@ -143,3 +143,13 @@ $accent-hover-color: darken($accent-color, 10%);
     width: auto;
   }
 }
+
+.social-icons {
+  display: flex;
+  gap: 2rem;
+  justify-content: end;
+
+  img {
+    height: 24px;
+  }
+}
