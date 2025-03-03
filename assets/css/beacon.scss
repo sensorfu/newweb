@@ -1,7 +1,10 @@
 ---
 ---
 .beacon-hero {
-  background-image: url(../img/beacon_banner.jpg);
+  background-image:
+      url(../img/beacon_banner.jpg),
+      //fallback while loading
+      linear-gradient(135deg, var(--primary-color) 60%, var(--accent-color) 90%);
   height: 500px;
 
   .hero-content {

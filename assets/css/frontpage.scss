@@ -4,6 +4,8 @@
   background-image: linear-gradient(104.31deg, rgba(0, 0, 0, 0.76) 39%, rgba(230, 50, 53, 0.81) 90%),
   url(../img/frontpage_banner.jpg);
 
+  background-blend-mode: overlay, screen, overlay;
+
   height: 500px;
 }
 
