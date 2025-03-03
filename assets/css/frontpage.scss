@@ -1,12 +1,19 @@
 ---
 ---
+@import "variables";
+@import "utils";
+
 .front-hero {
   background-image: linear-gradient(104.31deg, rgba(0, 0, 0, 0.76) 39%, rgba(230, 50, 53, 0.81) 90%),
   url(../img/frontpage_banner.jpg);
 
   background-blend-mode: overlay, screen, overlay;
 
-  height: 500px;
+  height: 400px;
+
+  @include media(md) {
+    height: 500px;
+  }
 }
 
 .front-beacon-hero {
@@ -33,6 +40,12 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    flex-basis: 35%;
+
+    @include media(lg) {
+      flex-basis: initial;
+    }
 
     .img-container {
       flex-grow: 1;
@@ -65,11 +78,19 @@
   justify-content: stretch;
 
   .post-card {
-    flex: 1 1 30%;
-    min-width: 300px;
-    max-width: 45%;
     height: 400px;
+    flex: 1 1 300px;
     background-color: white;
+
+    @include media(sm) {
+      flex: 1 1 50%;
+      min-width: 300px;
+    }
+
+    @include media(md) {
+      flex: 1 1 30%;
+      max-width: 30%;
+    }
 
     > * {
       padding: 1rem 2rem;
@@ -82,12 +103,12 @@
       align-items: start;
       gap: 1rem;
       height: 160px;
-      background-image: linear-gradient(135deg, var(--primary-color) 60%, var(--accent-color) 90%);
+      background-image: linear-gradient(135deg, $primary-color 60%, $accent-color 90%);
     }
 
     .post-tag {
       display: inline-block;
-      background-color: var(--accent-color);
+      background-color: $accent-color;
       color: white;
       padding: 0 15px;
       border-radius: 1rem;
@@ -108,7 +129,7 @@
     }
 
     .post-link {
-      color: var(--accent-color);
+      color: $accent-color;
       text-decoration: none;
     }
   }
@@ -136,9 +157,11 @@
   height: 350px;
 
   .text-container {
-    background-color: var(--primary-color);
+    background-color: $primary-color;
     flex: 0 0 auto;
-    width: 450px;
+    width: 300px;
+    padding: 2rem;
+
 
     color: white;
 
@@ -147,15 +170,23 @@
       font-weight: 700;
     }
 
-    padding: 4rem;
-
     a {
       display: flex;
       gap: 1.5rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: white;
       text-decoration: none;
     }
+
+    @include media(md) {
+      width: 450px;
+      padding: 4rem;
+
+      a {
+        font-size: 1.5rem;
+      }
+    }
+
   }
 
   .bg-container {
