@@ -25,7 +25,19 @@
     text-align: center;
   }
 }
+.about-hero {
+  background-image: url(../img/beacon_banner.jpg);
+  background-size: cover;
+  background-position: center;
 
+  .hero-content {
+    // max-width: 500px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); // Transparent nightblue
+
+  }
+}
 .reference-track img {
   height: var(--carousel-image-height);
 }
