@@ -4,123 +4,145 @@ title: SensorFu Beacon - Always know if your network leaks!
 description: SensorFu Ltd manufactures and sells advanced automatic security policy checks. SensorFu’s first product, SensorFu Beacon, assures the isolation of computer networks.
 preload_image: /assets/img/frontpage_banner.jpg
 ---
-<div class="hero front-hero">
-    <div class="container-xl">
-        <div class="hero-content">
-            <h1>Cybersecurity starts with the fundamentals</h1>
-            <p>
-                Security requirements keep adding up, while systems and security solutions 
-                get more complex every day. But before implementing more advanced and complex 
-                solutions, be sure you can verify the basic cybersecurity fundamentals first. 
-                Let’s get back to basics.
-            </p>
-            <div>
-                <a class="btn btn-gradient" href="about.html#">About us &rarr;</a>
-            </div>
-        </div>
+
+<div class="hero front-hero2">
+  <div class="container-xl">
+    <div class="hero-content">
+      <h1>Cybersecurity starts with the fundamentals</h1>
+      <p class="lead">
+        Security requirements keep adding up, while systems and security
+        solutions get more complex every day. But before implementing more
+        advanced and complex solutions, be sure you can verify the basic
+        cybersecurity fundamentals first. Let’s get back to basics.
+      </p>
+      <div>
+        <a class="btn btn-gradient" href="about.html#">About us &rarr;</a>
+      </div>
     </div>
+  </div>
 </div>
 
 {% include reference-carousel.html %}
 
-<div class="container-xl my-4">
-    <h1 class="text-center p-md-4">SensorFu provides cybersecurity for Operational Technology (OT) across all
-        industries</h1>
+<div class="container-xl my-5 py-2 px-4">
+  <h1 class="text-center p-md-4">
+    SensorFu provides cybersecurity for Operational Technology (OT) across all
+    industries
+  </h1>
 
-    <div class="industry-cards">
-        <div class="industry-card">
-            <div class="img-container">
-                <img src="/assets/img/industry-icons/manufacturing.svg" alt="Manufacturing">
-            </div>
-            <a class="btn" href="">Manufacturing</a>
-        </div>
-        <div class="industry-card">
-            <div class="img-container">
-                <img src="/assets/img/industry-icons/energy.svg" alt="Energy and utilities">
-            </div>
-            <a class="btn" href="">Energy and utilities</a>
-        </div>
-        <div class="industry-card">
-            <div class="img-container">
-                <img src="/assets/img/industry-icons/transport.svg" alt="Transportation">
-            </div>
-            <a class="btn" href="">Transportation</a>
-        </div>
-        <div class="industry-card">
-            <div class="img-container">
-                <img src="/assets/img/industry-icons/other.svg" alt="Other industries">
-            </div>
-            <a class="btn" href="">Other industries</a>
-        </div>
+  <div class="industry-cards p-4">
+    <div class="industry-card">
+      <div class="img-container">
+        <img
+          src="/assets/img/industry-icons/manufacturing.svg"
+          alt="Manufacturing"
+        />
+      </div>
+      <h3 class="p-2">Manufacturing</h3>
     </div>
+    <div class="industry-card">
+      <div class="img-container">
+        <img
+          src="/assets/img/industry-icons/energy.svg"
+          alt="Energy and utilities"
+        />
+      </div>
+      <h3 class="p-2">Energy and utilities</h3>
+    </div>
+    <div class="industry-card">
+      <div class="img-container">
+        <img
+          src="/assets/img/industry-icons/transport.svg"
+          alt="Transportation"
+        />
+      </div>
+      <h3 class="p-2">Transportation</h3>
+    </div>
+    <div class="industry-card">
+      <div class="img-container">
+        <img
+          src="/assets/img/industry-icons/other.svg"
+          alt="Other industries"
+        />
+      </div>
+      <h3 class="p-2">Other industries</h3>
+    </div>
+  </div>
 </div>
 
-<div class="hero front-beacon-hero mt-4">
-    <div class="container-xl">
-        <div class="hero-content">
-            <img src="/assets/img/beacon-by-sensorfu.svg" alt="Beacon By SensorFu">
-            <h2>
-                Designed for customers who depend on network segmentation
-            </h2>
-            <div>
-                <a class="btn btn-gradient" href="/beacon.html">Learn more &rarr;</a>
-            </div>
-        </div>
+<div class="hero front-beacon-hero mt-">
+  <div class="container-xl">
+    <div class="hero-content">
+      <img src="/assets/img/beacon-by-sensorfu.svg" alt="Beacon By SensorFu" />
+      <p class="lead">
+        Designed for customers who depend on network segmentation
+      </p>
+      <div>
+        <a class="btn btn-gradient" href="/beacon.html">Learn more &rarr;</a>
+      </div>
     </div>
+  </div>
 </div>
 
-<div class="bg-gray py-4 px-2 px-md-4">
-    <div class="container-xl">
-        <h1>Latest articles</h1>
-        <p>Don’t miss out on SensorFu’s happenings and blog posts! </p>
+<div class="bg-gray py-5 px-2 px-md-4">
+  <div class="container-xl py-4">
+    <h1>Latest articles</h1>
+    <p>Don’t miss out on SensorFu’s happenings and blog posts!</p>
 
-        <div class="posts-container pt-4">
-            {% for post in site.posts limit:3 %}
-            <div class="post-card">
-                <div class="post-header">
-                    <div class="post-tag">{{ post.categories | first }}</div>
-                    <h3 class="post-title">{{ post.title }}</h3>
-                    <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
-                </div>
-                <div class="card-body">
-                    <div class="post-excerpt">
-                        {{ post.excerpt }}
-                    </div>
-                    <a class="post-link" href="{{ post.url }}">Read more &rarr;</a>
-                </div>
-            </div>
-            {% endfor %}
+    <div class="posts-container pt-4">
+      {% for post in site.posts limit:3 %}
+      <div class="post-card">
+        <div class="post-header">
+          <div class="post-tag">
+            {{ post.categories | split: ',' | first | strip | replace: '["', ''
+            | replace: '"]', '' }}
+          </div>
+          <h4 class="post-title">{{ post.title }}</h4>
         </div>
-
-        <div class="post-categories pt-4">
-            {% for category in site.categories %}
-            {% capture category_name %}{{ category | first }}{% endcapture %}
-            <span class="category">
-                <a href="{{site.baseurl}}/{{category_name}}">{{category_name}}</a>
+        <div class="card-body py-4">
+          <div class="post-excerpt">
+            <span class="post-date"
+              >{{ post.date | date: "%B %-d, %Y" }} -
             </span>
-            {% endfor %}
+            {{ post.excerpt }}
+          </div>
+          <a class="post-link" href="{{ post.url }}">Read more &rarr;</a>
         </div>
+      </div>
+      {% endfor %}
     </div>
+
+    <div class="p-5">
+      <a href="resources.html#blogs">Blogs</a> |
+      <a href="resources.html#whitepapers">Whitepapers</a>
+    </div>
+  </div>
 </div>
 
-<div class="bg-gray">
-    <div class="container-xl px-0">
-        <div class="video-section">
-            <div class="text-container">
-                <h2>Real stories on securing OT networks!</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
+<div class="bg-gray py-4">
+  <div class="container-xl px-0">
+    <div class="video-section mb-4">
+      <div class="text-container py-4">
+        <h2 class="pt-4">Real stories on securing OT networks!</h2>
+        <p class="py-2">Check our videos on Youtube</p>
 
-                <a href="https://www.youtube.com/@sensorfu" rel="noreferer noopener" target="_blank">
-                    <img src="assets/img/social-icons/youtube.svg" alt="YouTube">
-                    <span>Check&nbsp;our&nbsp;videos on&nbsp;Youtube &rarr;</span>
-                </a>
-            </div>
-            <div class="bg-container">
-                <img src="/assets/img/video-banner.jpg" alt="Video Banner">
-                <div class="gradient-overlay"></div>
-            </div>
-        </div>
+        <a
+          href="https://www.youtube.com/@sensorfu"
+          rel="noreferer noopener"
+          target="_blank"
+        >
+          <img
+            src="assets/img/social-icons/youtube.svg"
+            alt="YouTube"
+            class="py-1"
+          />
+          <span class="py-3">@sensorFu &rarr;</span>
+        </a>
+      </div>
+      <div class="bg-container">
+        <img src="/assets/img/video-banner.jpg" alt="Video Banner" />
+        <div class="gradient-overlay"></div>
+      </div>
     </div>
+  </div>
 </div>
