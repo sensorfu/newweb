@@ -1,37 +1,38 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="SensorFu Ltd">
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta name="author" content="SensorFu Ltd" />
 
-    <title>{{ page.title }}</title>
+  <title>{{ page.title }}</title>
 
-    <link href="/assets/img/favicon.png" rel="icon" type="image/png">
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
+  <link href="/assets/img/favicon.png" rel="icon" type="image/png" />
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
 
-    {% if page.layout == "frontpage" %}
-    <link rel="stylesheet" href="/assets/css/frontpage.css">
-    {% endif %}
+  {% if page.layout == "frontpage" %}
+  <link rel="stylesheet" href="/assets/css/frontpage.css" />
+  {% endif %} {% if page.url == "/beacon.html" %}
+  <!-- <link rel="stylesheet" href="/assets/css/beacon.css"> -->
+  {% endif %} {% if page.preload_image %}
+  <link
+    rel="preload"
+    href="{{ page.preload_image | absolute_url }}"
+    as="image"
+  />
+  {% endif %}
 
-    {% if page.url == "/beacon.html" %}
-    <link rel="stylesheet" href="/assets/css/beacon.css">
-    {% endif %}
+  <!-- Open Graph Tags-->
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
 
-    {% if page.preload_image %}
-    <link rel="preload" href="{{ page.preload_image | absolute_url }}" as="image">
-    {% endif %}
-
-    <!-- Open Graph Tags-->
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-
-    {% if page.ogimage %}
-        <meta property="og:image" content="{{ page.ogimage | absolute_url }}">
-    {%endif %}
-
-    {% if page.description %}
-        <meta name="description" content="{{ page.description }}">
-        <meta property="og:description" content="{{ page.description }}">
-    {% endif %}
+  {% if page.ogimage %}
+  <meta property="og:image" content="{{ page.ogimage | absolute_url }}" />
+  {%endif %} {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  {% endif %}
 </head>
