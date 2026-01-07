@@ -1,11 +1,16 @@
 ---
 ---
+
 @import "variables";
 @import "utils";
 
 .front-hero {
-  background-image: linear-gradient(104.31deg, rgba(0, 0, 0, 0.76) 39%, rgba(230, 50, 53, 0.81) 90%),
-  url(../img/frontpage_banner.jpg);
+  background-image: linear-gradient(
+      104.31deg,
+      rgba(0, 0, 0, 0.76) 39%,
+      rgba(230, 50, 53, 0.81) 90%
+    ),
+    url(../img/frontpage_banner.jpg);
 
   background-blend-mode: overlay, screen, overlay;
 
@@ -13,6 +18,16 @@
 
   @include media(md) {
     height: 500px;
+  }
+}
+
+.front-hero2 {
+  background-image: url(../img/earth-banner.jpg);
+
+  .hero-content {
+    max-width: 700px;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -25,19 +40,53 @@
     text-align: center;
   }
 }
-.about-hero {
-  background-image: url(../img/beacon_banner.jpg);
+
+.beacon-hero {
+  background-image: url(../img/beacon_banner.jpg),
+    //fallback while loading
+    linear-gradient(135deg, $primary-color 60%, $accent-color 90%);
   background-size: cover;
   background-position: center;
 
   .hero-content {
-    // max-width: 500px;
     align-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); // Transparent nightblue
-
   }
 }
+
+.about-hero {
+  background-image: url(../img/sfu-team.jpg);
+  background-size: cover;
+  background-position: center;
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.partners-hero {
+  background-image: url(../img/earth.jpg);
+  background-size: cover;
+  background-position: top center;
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.resources-hero {
+  background-image: url(../img/resources-banner.jpg);
+  background-size: cover;
+  background-position: top center;
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+}
+
 .reference-track img {
   height: var(--carousel-image-height);
 }
@@ -114,8 +163,12 @@
       flex-direction: column;
       align-items: start;
       gap: 1rem;
-      height: 160px;
-      background-image: linear-gradient(135deg, $primary-color 60%, $accent-color 90%);
+      height: 170px;
+      background-image: linear-gradient(
+        135deg,
+        $primary-color 60%,
+        $accent-color 90%
+      );
     }
 
     .post-tag {
@@ -130,7 +183,12 @@
 
     .post-title {
       color: white;
+    }
 
+    .post-date {
+      float: left;
+      font-weight: bold;
+      margin-right: 0.2em;
     }
 
     .post-excerpt {
@@ -152,7 +210,7 @@
 
   .category {
     &:not(:last-of-type)::after {
-      content: ' | ';
+      content: " | ";
     }
   }
 
@@ -174,7 +232,6 @@
     width: 300px;
     padding: 2rem;
 
-
     color: white;
 
     h2 {
@@ -188,6 +245,11 @@
       font-size: 1.2rem;
       color: white;
       text-decoration: none;
+      line-height: 1.2em;
+    }
+
+    a:hover {
+      opacity: 0.8;
     }
 
     @include media(md) {
@@ -198,7 +260,6 @@
         font-size: 1.5rem;
       }
     }
-
   }
 
   .bg-container {
@@ -219,7 +280,11 @@
       width: 100%;
       height: 100%;
       mix-blend-mode: overlay;
-      background-image: linear-gradient(102deg, rgba(66, 162, 206, 0.45) 34%, rgba(127, 92, 163, 0.45) 77%);
+      background-image: linear-gradient(
+        102deg,
+        rgba(66, 162, 206, 0.45) 34%,
+        rgba(127, 92, 163, 0.45) 77%
+      );
     }
   }
 }
