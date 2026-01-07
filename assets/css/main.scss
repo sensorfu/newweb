@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "variables";
 @import "utils";
 
@@ -15,7 +16,7 @@
 
   --carousel-image-height: 30px;
 
-  @include media(sm){
+  @include media(sm) {
     --carousel-image-height: 40px;
   }
 }
@@ -24,9 +25,22 @@ html {
   background-color: $primary-color;
 }
 
+a.link,
+a.visited {
+  color: $primary-color !important;
+}
+
 .bg-primary {
   background-color: $primary-color !important;
   color: white;
+}
+
+.bg-dark {
+  background-color: $bg-dark !important;
+}
+
+.bg-light {
+  background-color: $bg-light !important;
 }
 
 .navbar {
@@ -84,7 +98,7 @@ html {
     font-size: 1.2rem;
     font-weight: 600;
 
-     @include media(sm) {
+    @include media(sm) {
       font-size: 1.5rem;
     }
   }
@@ -97,7 +111,6 @@ html {
     height: 450px;
   }
 }
-
 
 .hero-content {
   height: 100%;
@@ -129,7 +142,7 @@ html {
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     width: calc(var(--carousel-image-height) * 3);
@@ -147,7 +160,6 @@ html {
     background: linear-gradient(to left, black 0%, transparent 100%);
   }
 }
-
 
 @keyframes spin-carousel {
   0% {
