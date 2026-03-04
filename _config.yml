@@ -11,3 +11,4 @@ theme: null
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-sitemap
