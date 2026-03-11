@@ -1,9 +1,12 @@
 ---
 layout: post
-title:  "New agile methods for improving cyber security in companies"
-date:   2025-01-01 00:00:00 +0000
+title: "New agile methods for improving cyber security in companies"
+date: 2025-01-01 00:00:00 +0000
 categories: whitepaper
+redirect_from:
+  - /whitepapers/tonttu2020.html
 ---
+
 It is important that companies identify the material that they need to protect to enable efficient protection. Complex isolated networks are not always as well isolated as you would think. The feasibility study (Toteutettavuustutkimus) conducted by the National Cyber Security Centre Finland (NCSC-FI) successfully tested and developed new, agile and scalable methods for improving these areas.
 
 Key findings:

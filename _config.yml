@@ -8,3 +8,6 @@ include: [".well-known"]
 # Build settings
 # Disable github pages default theme
 theme: null
+
+plugins:
+  - jekyll-redirect-from
